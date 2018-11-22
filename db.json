@@ -59,6 +59,16 @@
       "imagePath": "assets/img/restaurants/tasty.png",
       "about": "A doceria com mais tradição da cidade",
       "hours": "Funciona de segunda à sábado, de 8h às 23h"
+    },
+    {
+      "id": "tele-burguer",
+      "name": "Tele Burguer",
+      "category": "Hamburguers",
+      "deliveryEstimate": "25m",
+      "rating": 4.9,
+      "imagePath": "assets/img/restaurants/breadbakery.png",
+      "about": "A Tele Burguer é a melhor franquia de hamburguers artesanais de Marília e região.",
+      "hours": "Funciona de terça à domingo, de 19h às 2h"
     }
   ],
   "menu": [
