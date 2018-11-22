@@ -31,4 +31,12 @@ export class RestaurantsService {
       .catch(ErrorHandler.handleError);
   }
 
+  // GET RESTAURANTS BY ID
+  getRestaurantsById(id: string) {
+    return this.http
+      .get(`${MEAT_API}/restaurants/${id}`)
+      .map(response => response.json())
+      .catch(ErrorHandler.handleError);
+  }
+
 }
