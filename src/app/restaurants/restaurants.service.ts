@@ -9,8 +9,9 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-// MODEL
+// MODELS
 import { Restaurant } from './restaurant/restaurant.model';
+import { MenuItem } from './../restaurant-detail/menu-item/menu-item.model';
 
 // API ROUTE
 import { MEAT_API } from './../app.api';
@@ -42,6 +43,12 @@ export class RestaurantsService {
   // GET REVIEWS OF RESTAURANT
   reviewsForRestaurant(id: string): Observable<any> {
     return this.http.get(`${MEAT_API}/restaurants/${id}/reviews`)
+      .map(res => res.json())
+      .catch(ErrorHandler.handleError);
+  }
+
+  menuForRestaurant(id: string): Observable<MenuItem[]> {
+    return this.http.get(`${MEAT_API}/restaurants/${id}/menu`)
       .map(res => res.json())
       .catch(ErrorHandler.handleError);
   }
