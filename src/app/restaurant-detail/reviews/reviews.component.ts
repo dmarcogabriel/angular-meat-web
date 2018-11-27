@@ -1,4 +1,10 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+
+// PROVIDERS
+import { RestaurantsService } from 'app/restaurants/restaurants.service';
+
 
 @Component({
   selector: 'mt-reviews',
@@ -6,9 +12,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewsComponent implements OnInit {
 
-  constructor() { }
+  reviews: Observable<any>;
+
+  constructor(
+    private restaurantsService: RestaurantsService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.reviews = this.restaurantsService
+      .reviewsForRestaurant(this.route.parent.snapshot.params['id']);
   }
 
 }

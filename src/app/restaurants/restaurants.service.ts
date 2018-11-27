@@ -39,4 +39,11 @@ export class RestaurantsService {
       .catch(ErrorHandler.handleError);
   }
 
+  // GET REVIEWS OF RESTAURANT
+  reviewsForRestaurant(id: string): Observable<any> {
+    return this.http.get(`${MEAT_API}/restaurants/${id}/reviews`)
+      .map(res => res.json())
+      .catch(ErrorHandler.handleError);
+  }
+
 }
