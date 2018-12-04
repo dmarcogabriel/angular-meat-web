@@ -27,9 +27,4 @@ export class MenuComponent implements OnInit {
       .menuForRestaurant(this.route.parent.snapshot.params['id']);
   }
 
-  // EVENTO CHAMADO PELO COMPONENTE FILHO
-  addToCart(item: MenuItem) {
-    console.log(item);
-  }
-
 }

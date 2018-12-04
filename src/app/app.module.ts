@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 
 // PROVIDERS
 import { RestaurantsService } from './restaurants/restaurants.service';
+import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-cart.service';
 
 // HEADER NAVBAR
 import { HeaderComponent } from './header/header.component';
@@ -48,7 +49,8 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
-    RestaurantsService
+    RestaurantsService,
+    ShoppingCartService
   ],
   bootstrap: [AppComponent]
 })
