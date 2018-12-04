@@ -15,7 +15,7 @@ import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail
   import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
 
 // ORDER PAGE
-import { OrderComponent } from './order/order';
+import { OrderComponent } from './order/order.component';
 
 
 export const ROUTES: Routes = [
